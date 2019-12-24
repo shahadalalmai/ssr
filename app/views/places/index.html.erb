@@ -3,10 +3,37 @@
 
 
 <%if user_signed_in? %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    Welcome <%= @user.name %><br>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> || 
+    <%= link_to "New Place Review", new_place_path%> || 
+    <%= link_to "My Reviews", my_list_path(@user)%>
 <% else %>
     <%= link_to "Sign In", new_user_session_path %>
 <% end %>
 
-<p>Become One Of US and Share Your Review!</p>
-<p> <%= link_to "Sign Up Now!" , new_user_registration_path %> </p>
+
+<% @places.each do |place|%>
+    <br><img src=<%=place.image%> height="200" width="290"><br>
+    <%= place.name %> || <%= place.city %>  
+
+    <% @users.each do |user| %>
+        <% if user.id == place.user_id %>
+        || Visited By: <%= user.name %>
+        <% end %>
+    <% end %>
+
+    || <%= link_to "Details", place_path(place.id)%>
+    
+<hr>
+<% end %>
+
+
+
+<%if !user_signed_in? %>
+    <p>Become One Of US and Share Your Review!</p>
+    <p> <%= link_to "Sign Up Now!" , new_user_registration_path %> </p>
+<% end %>
+
+
+
+

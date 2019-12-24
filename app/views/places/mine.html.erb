@@ -1,0 +1,12 @@
+<h1>Your Reviews</h1>
+
+
+<% @places.each do |place|%>
+    <br><img src=<%=place.image%> height="200" width="290"><br>
+    <%= place.name %> || <%= place.city %>  
+    || <%= link_to "Details", place_path(place.id)%>
+    
+<hr>
+<% end %>
+
+<%= link_to "Back", places_path %>

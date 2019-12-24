@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   #devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  get "/places/mine/:id", to: "places#mine", as: "my_list"
+
   #This is to redefine the default routes and give it the new naming and routing with our new devise named users
   devise_for :users, controllers: { registrations: 'users/registrations',
     sessions: 'users/sessions', unlocks: 'users/unlocks',
