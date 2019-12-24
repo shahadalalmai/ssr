@@ -13,6 +13,6 @@ Rails.application.routes.draw do
     sessions: 'users/sessions', unlocks: 'users/unlocks',
     passwords: 'users/passwords', confirmations: 'users/confirmations'}
 
-  root to: "'places#index'"
+  root to: "places#index"
 
 end

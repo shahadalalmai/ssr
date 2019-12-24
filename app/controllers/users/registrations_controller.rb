@@ -55,7 +55,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    def after_sign_up_path_for(resource)
      super(resource)
      #'/home' # change it to places index, or if I get so creative, create a method > view to guide the new user on how to start using our website
-     'places/index'
+     '/places'
     end
 
 
@@ -64,7 +64,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
      def after_update_path_for(resource)
       super(resource)
       #'/home' # think of adding a js for auto redirecting after a view saying your info has been updated bye bye
-      'places/index'
+      '/places'
     end
 
 
