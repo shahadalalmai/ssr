@@ -1,5 +1,6 @@
-<h2>Log in</h2>
+<h1>Sign in</h1>
 
+<div class="form-group">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -7,7 +8,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <br><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
@@ -17,12 +18,15 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
+  <br>
   <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
+    <%= f.submit "Log in" , :class => "btn btn-outline-info"%>
+  </div><br>
 <% end %>
 
 <%= render "users/shared/links" %>
+<%= link_to "Change your password", edit_user_password_path %>  
 
-<%= link_to "Back", places_path %>
+</div>
+
+<button><%= link_to "Back", places_path %></button>

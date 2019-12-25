@@ -2,14 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// #f{
-     
-//     position: absolute;
-//     bottom: 0 ;
-//     width: 100% ;
-//     height: 2.5rem ;
 
-// }
 
 #p{
     margin-top: 30px !important;
@@ -22,6 +15,7 @@
 
 .b-section{
     background: url("bg-batten.png");
+    // background-image: url("light_sss_logo.png");
     height: 400px;
 }
 
@@ -49,3 +43,9 @@ margin-top: 7%;
     .b-section > button > a{
         color: #fff !important;
         }
+
+
+.jumbotron{
+    background-color: #f8f9fa !important;
+    
+}

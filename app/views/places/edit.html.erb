@@ -1,6 +1,7 @@
-<h1>Places#edit</h1>
-<p>Find me in app/views/places/edit.html.erb</p>
+<h1>Edit Review</h1>
 
+
+<div class="form-group">
 
 <%= form_for @place, url: {action: "update"} do |f| %>
     
@@ -9,7 +10,7 @@
     <br>
 
     <%= f.label :desc, 'Review'%><br>
-    <%= f.text_field :desc %>
+    <%= f.text_area :desc %>
     <br>
 
     <%= f.label :city, 'City'%><br>
@@ -17,18 +18,19 @@
     <br>
 
     <%= f.label :image, 'Image'%><br>
-    <%= f.text_field :image %>
+    <%= f.text_area :image %>
     <br>
 
     <%= f.label :location, 'Location'%><br>
-    <%= f.text_field :location %>
-    <br>
+    <%= f.text_area :location %>
+    <br><br>
     
 
-    <%= f.submit "Update" , data: {confirm: "Are you sure?"}%>
+    <%= f.submit "Update" , data: {confirm: "Are you sure?"}, :class => "btn btn-outline-info"%> 
 
     <br>
 
 <% end %>
 
-<%= link_to "Back", place_path(@place)%>
+</div>
+<button> <%= link_to "Back", place_path %> </button>
