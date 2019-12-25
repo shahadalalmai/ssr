@@ -8,9 +8,30 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+
+
 import '../stylesheets/application'
 
 import './bootstrap_custom.js'
+//= require jquery
+
+const $ = require("jquery");
+
+$(document).on("turbolinks:load", function() {
+    console.log("page content has loaded")
+    // add your javascript here
+
+    // $('img').on('click', function(){
+
+    
+    // })
+
+    //$('img').slideDown("slow");
+    $('.notice').delay(3200).fadeOut(300);
+    $('.alert').delay(3200).fadeOut(300);
+
+ })
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

@@ -49,6 +49,10 @@
 <%if !user_signed_in? %>
     <h1>Become One of Us and Share Your Review!</h1>
     <button> <%= link_to "Sign Up Now!" , new_user_registration_path %> </button>
+<% else %>
+    <h1>Visit Saudi</h1>
+    <p>Apply for your Saudi Visa and Explore The Arabian Culture and History</p>
+    <button onclick="window.location.href = 'https://www.visitsaudi.com/en';" >Apply Now!</button>
 <% end %>
 
 </div>

@@ -31,7 +31,7 @@ h1{
 #test{
     max-height: 106px;
     border-top: 4px solid orange;
-    background: url("stylesheets/assets/bg-batten.png");
+    background: url("/assets/bg-batten.png");
     background-repeat: no-repeat;
     box-shadow: 5px 5px 5px #00000012;
 
@@ -65,3 +65,13 @@ button > a{
     color: purple;
 }
 
+.n{
+    position: fixed;
+    text-align: center;
+    width:20%;
+    height:10%;
+    z-index:9999;
+    border-radius: 40px;
+    font-size: 18px;
+    color: orange;
+} 
