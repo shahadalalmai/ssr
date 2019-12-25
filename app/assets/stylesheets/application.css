@@ -67,11 +67,11 @@ button > a{
 
 .n{
     position: fixed;
-    text-align: center;
     width:20%;
     height:10%;
     z-index:9999;
     border-radius: 40px;
     font-size: 18px;
     color: orange;
+    padding-top: 7px !important;
 } 
