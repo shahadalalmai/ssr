@@ -1,5 +1,4 @@
-<h1>Places#index</h1>
-<p>Find me in app/views/places/index.html.erb</p>
+<h1>Saudi Seasons Review</h1>
 
 
 <%if user_signed_in? %>
@@ -12,22 +11,42 @@
 <% end %>
 
 
+<div class="d-flex flex-wrap justify-content-around ">
+  
 <% @places.each do |place|%>
-    <br><img src=<%=place.image%> height="200" width="290"><br>
-    <%= place.name %> || <%= place.city %>  
 
-    <% @users.each do |user| %>
-        <% if user.id == place.user_id %>
-        || Visited By: <%= user.name %>
-        <% end %>
-    <% end %>
+    <div class="p-2">
 
-    || <%= link_to "Details", place_path(place.id)%>
-    
-<hr>
+            <div class="d-flex flex-column flex-wrap align-items-center">
+                    
+                    <div class="p-2">
+                    <img src=<%=place.image%> height="200" width="290">
+                    </div>
+
+                    <div class="p-2">
+                    <%= place.name %> || <%= place.city %>  
+                    </div>
+
+                    <div class="p-2">
+                    <% @users.each do |user| %>
+                        <% if user.id == place.user_id %> Visited By: <%= user.name %>
+                        <% end %>
+                    <% end %>
+                    </div>
+
+                    <div>
+                    <button type="button" class="btn btn-outline-secondary" id="white"><%= link_to "Details", place_path(place.id)%></button>
+                    </div>
+
+            </div>
+
+    </div>
+
 <% end %>
 
+</div>
 
+<hr>
 
 <%if !user_signed_in? %>
     <p>Become One Of US and Share Your Review!</p>

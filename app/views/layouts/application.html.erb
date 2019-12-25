@@ -7,12 +7,78 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="test">
+  
+  <a class="navbar-brand" href="#"> <%= image_tag "sss_logo.png", size: "90x60"%> </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", places_path, :class => "nav-link" %>
+
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.gea.gov.sa/en/">GAE</a>
+      </li>
+
+      <%if user_signed_in? %>
+          <li class="nav-item">
+                <%= link_to "My Reviews", my_list_path(current_user), :class => "nav-link" %>
+          </li>
+
+          <li class="nav-item">
+                <%= link_to "New Review", new_place_path, :class => "nav-link" %>
+          </li>
+
+                
+      <% end %>
+
+      
+    </ul>
+
+<%if user_signed_in? %>
+      <h5>Welcome <%= current_user.name %></h5>
+          <button class="btn btn-outline-success my-2 my-sm-0"> <%= link_to "Sign Out", destroy_user_session_path, method: :delete%> </button>
+<% else %>
+ <button class="btn btn-outline-success my-2 my-sm-0"> <%= link_to "Sign In", new_user_session_path %> </button>
+
+<% end %>
+
+  </div>
+</nav>
+
+
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
+
     <%= yield %>
+
+
+
   </body>
+
+
+<footer id="f" class="text-center py-3">
+
+  <!-- Copyright -->
+© 2019 Copyright: Care.com
+  <!-- Copyright -->
+
+</footer>
+
 </html>

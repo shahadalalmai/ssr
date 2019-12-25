@@ -9,7 +9,9 @@
 
     <%if user_signed_in? %>
         <%= link_to "Edit", edit_place_path(@place) %>
+        <%= link_to "Add to Favorite", places_path %>
         <%= link_to "Delete Review", place_path(@place), method: :delete, data: {confirm: "Are you sure?"}%>
     <% end %>
 
     <%= link_to "Back", places_path %>
+    
