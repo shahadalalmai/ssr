@@ -19,8 +19,12 @@
     color: white;
 } */
 
+body {
+    font-family: 'Lobster', cursive !important;
+    font-size: x-large !important;
+}
+
 h1{
-    text-align: center;
     color: purple;
 }
 
@@ -33,3 +37,6 @@ h1{
 
 }
 
+.middle{
+    text-align: center;
+}

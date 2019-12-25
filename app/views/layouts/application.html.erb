@@ -4,7 +4,6 @@
     <title>Ssr</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
@@ -13,7 +12,8 @@
   <body>
      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="test">
   
-  <a class="navbar-brand" href="#"> <%= image_tag "sss_logo.png", size: "90x60"%> </a>
+  <a class="navbar-brand"> <%= image_tag "sss_logo.png", size: "90x60"%> </a>
+
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -43,6 +43,10 @@
                 <%= link_to "New Review", new_place_path, :class => "nav-link" %>
           </li>
 
+          <li class="nav-item">
+                <%= link_to "My Account", edit_user_registration_path, :class => "nav-link" %>
+          </li>
+
                 
       <% end %>
 
@@ -65,18 +69,17 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-
+  <div class="middle">
     <%= yield %>
-
-
+  </div>
 
   </body>
 
 
-<footer id="f" class="text-center py-3">
+<footer id="f" class="text-center py-3 small mb-2 text-secondary">
 
   <!-- Copyright -->
-© 2019 Copyright: Care.com
+Copyright © Saudi Seasons Review - Saudi Seasons - General Entertainment Authority
   <!-- Copyright -->
 
 </footer>
