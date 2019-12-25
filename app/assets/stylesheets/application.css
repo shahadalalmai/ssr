@@ -31,7 +31,7 @@ h1{
 #test{
     max-height: 106px;
     border-top: 4px solid orange;
-    background: url("/assets/bg-batten.png");
+    background: url("stylesheets/assets/bg-batten.png");
     background-repeat: no-repeat;
     box-shadow: 5px 5px 5px #00000012;
 
