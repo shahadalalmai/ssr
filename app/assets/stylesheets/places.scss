@@ -11,10 +11,17 @@
 
 // }
 
+#p{
+    margin-top: 30px !important;
+    box-shadow: 9px 9px 9px #00000012;
+}
 
+.card:hover {
+    background: #fff0f0cb;
+}
 
 .b-section{
-    background: url("/assets/bg-batten.png");
+    background: url("bg-batten.png");
     height: 400px;
 }
 
@@ -34,6 +41,8 @@ margin-top: 7%;
     border: none;
     transition: all 0.4s ease 0s;
     }
+
+
 
     .b-section > button > a{
         color: #fff !important;
