@@ -18,7 +18,7 @@ Below is the list of technologies I used in developing this project.
 ## wireframes and user stories.
 #### Wireframes and ERD:
 
-<img src="https://drive.google.com/open?id=1WBaN5_s955IOfYG1zhhggHsq6sh3OmYF" width="300" height="300" />
+<img src="https://drive.google.com/file/d/1WBaN5_s955IOfYG1zhhggHsq6sh3OmYF/view?usp=sharing" width="300" height="300" />
 <img src="https://drive.google.com/open?id=1kmzfh2fPBVCmS-UJ6k3w6m6gNnJ5x8JL" width="300" height="300" />
 
 
